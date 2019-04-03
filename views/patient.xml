@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- medic_hn.patient form view -->
+    <record id="model_name_view_form" model="ir.ui.view">
+        <field name="name">medic_hn.patient.view.form</field>
+        <field name="model">medic_hn.patient</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="identidad" required="1"/>
+                        <field name="name"/>
+                        
+                    </group>
+                    <group>
+                        <field name="gender"/>
+                        <field name="date_borth"/>
+                        
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>   
+
+    <!-- medic_hn.patient tree view -->
+    <record id="model_name_view_tree" model="ir.ui.view">
+        <field name="name">medic_hn.patient.view.tree</field>
+        <field name="model">medic_hn.patient</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="identidad"/>
+                <field name="name"/>
+                <field name="gender"/>
+                
+            </tree>
+        </field>
+    </record>
+
+    <!-- medic_hn.patient action window -->
+    <record id="medic_hn_patient_action" model="ir.actions.act_window">
+        <field name="name">Lista de pacientes</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">medic_hn.patient</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_type">form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                <!-- Add Text Here -->
+            </p><p>
+                <!-- More details about what a user can do with this object will be OK --> 
+            </p>
+        </field>
+    </record> 
+
+    <!-- sale.order inherit form view -->
+    <record id="view_id" model="ir.ui.view">
+        <field name="name">sale.order.inherit.view.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <!-- Add your xpath here -->
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <!-- Add your fields here -->
+                <field name="patient_id"/>
+            </xpath>
+            
+        </field>
+    </record>
+
+    <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+    <menuitem id="medic_menu_root" name="Medic" sequence="10" web_icon="medic_hn,static/description/icon.png"/>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="medic_menu_patient_act" name="Paciente" parent="medic_menu_root" action="medic_hn_patient_action" sequence="10"/>
+
+</odoo>
