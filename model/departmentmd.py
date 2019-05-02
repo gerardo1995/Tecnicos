@@ -1,6 +1,6 @@
 
 # -*- coding: utf-8 -*-
-
+from odoo import fields, models
 
 class Departamento(models.Model):
     _name ='technician.departamento'
