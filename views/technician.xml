@@ -11,7 +11,7 @@
                     <group>
                         <!-- Add your fields here -->
                         <field name="Nombre" required="1"/>
-                        <field name="Email"/>
+                        <field name="E mail"/>
                     </group>
 
                     <group>
