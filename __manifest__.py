@@ -1,8 +1,13 @@
 # -*- coding: utf-8 -*-
 {
     'name': "Products Hn",
+    'summary': "Modulo de registro de tecnicos",
 
-    'category': 'Sales',
+    'description': "Modulo que sirve para registrar al usiario tecnico asi como las tareas que sabe hacer",
+
+    'author': "Gerardo Martinez y Kevin Canales",
+
+    'category': 'Other',
     'version': '12.0.1',
 
     # any module necessary for this one to work correctly
@@ -21,7 +26,7 @@
         #'report/poa_report_templates.xml',
         #'report/poa_report_pivot.xml',
         #'report/pei_pivot.xml',
-        'views/products.xml',
+        'views/technician.xml',
         
     ],
     # only loaded in demonstration mode
