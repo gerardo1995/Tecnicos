@@ -27,6 +27,9 @@
         #'report/poa_report_pivot.xml',
         #'report/pei_pivot.xml',
         'views/technician.xml',
+        'views/rol.xml',
+        'views/departamento.xml',
+        'views/tarea.xml',
         
     ],
     # only loaded in demonstration mode
