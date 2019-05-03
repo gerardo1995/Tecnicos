@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Products Hn",
+    'name': "Products hn",
     'summary': "Modulo de registro de tecnicos",
 
-    'description': "Modulo que sirve para registrar al usiario tecnico asi como las tareas que sabe hacer",
+    'description': "Modulo que sirve para registrar al usiario tecnico asi como las tareas que hace.",
 
-    'author': "Gerardo Martinez y Kevin Canales",
+    'author': "Gerardo Martinez y Kevin Canales.",
 
     'category': 'Other',
     'version': '12.0.1',
